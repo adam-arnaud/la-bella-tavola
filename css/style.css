@@ -1,0 +1,241 @@
+/* ============================================
+   VARIABLES CSS
+   ============================================ */
+:root {
+  /* Couleurs */
+  --rouge: #c0392b;
+  --blanc: #ffffff;
+  --vert: #27ae60;
+  --dore: #d4a853;
+  --fond-sombre: #1a0a00;
+  --fond-moyen: #2c1810;
+  --texte-discret: #c9a98a;
+
+  /* Polices */
+  --police-titre: 'Georgia', serif;
+  --police-texte: 'Arial', sans-serif;
+
+  /* Espacements */
+  --espacement-s: 1rem;
+  --espacement-m: 2rem;
+  --espacement-l: 4rem;
+}
+
+/* ============================================
+   RESET
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   GLOBAL
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--fond-sombre);
+  color: var(--blanc);
+  font-family: var(--police-texte);
+  line-height: 1.6;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+nav {
+  background-color: var(--fond-moyen);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacement-m);
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--dore);
+}
+
+nav img {
+  height: 50px;
+  width: auto;
+}
+
+nav a {
+  color: var(--blanc);
+  text-decoration: none;
+  font-family: var(--police-texte);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--dore);
+}
+
+nav a.active {
+  color: var(--dore);
+  font-weight: bold;
+}
+
+.menu-liens {
+  display: flex;
+  gap: var(--espacement-m);
+}
+
+.menu-burger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--blanc);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacement-m);
+  padding: var(--espacement-l) var(--espacement-m);
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-texte {
+  flex: 1;
+}
+
+.hero-texte h1 {
+  font-family: var(--police-titre);
+  font-size: 3rem;
+  color: var(--dore);
+  margin-bottom: var(--espacement-s);
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.hero-texte p {
+  color: var(--texte-discret);
+  margin-bottom: var(--espacement-s);
+  font-size: 1.1rem;
+}
+
+.photo-hero {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 3px solid var(--dore);
+}
+
+/* ============================================
+   BOUTON
+   ============================================ */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--rouge);
+  color: var(--blanc);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: var(--espacement-s);
+  transition: all 0.3s ease;
+  border: 2px solid var(--rouge);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--rouge);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  background-color: var(--fond-moyen);
+  border-top: 2px solid var(--dore);
+  text-align: center;
+  padding: var(--espacement-m);
+  margin-top: var(--espacement-l);
+  color: var(--texte-discret);
+  line-height: 2;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+.apparition {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.apparition.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.credit {
+  color: var(--dore);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.credit:hover {
+  color: var(--blanc);
+  text-decoration: underline;
+}
+
+.logo-texte {
+  font-family: var(--police-titre);
+  font-size: 1.5rem;
+  color: var(--dore);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--espacement-m) var(--espacement-s);
+  }
+
+  .photo-hero {
+    max-width: 100%;
+  }
+
+  .menu-burger {
+    display: block;
+  }
+
+  .menu-liens {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: var(--espacement-s) 0;
+  }
+
+  .menu-liens.actif {
+    display: flex;
+  }
+
+  .hero-texte h1 {
+    font-size: 2rem;
+  }
+}
