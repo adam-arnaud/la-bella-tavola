@@ -211,6 +211,93 @@ footer {
 }
 
 /* ============================================
+   MENU - CATÉGORIES
+   ============================================ */
+.categorie {
+  max-width: 1200px;
+  margin: auto;
+  padding: var(--espacement-l) var(--espacement-m);
+  border-bottom: 1px solid var(--dore);
+}
+
+.categorie:last-child {
+  border-bottom: none;
+}
+
+.categorie h2 {
+  font-family: var(--police-titre);
+  color: var(--dore);
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: var(--espacement-m);
+  letter-spacing: 2px;
+}
+
+/* Contenu de la catégorie : photo + liste côte à côte */
+.categorie-contenu {
+  display: flex;
+  gap: var(--espacement-m);
+  align-items: flex-start;
+}
+
+/* Photo à gauche */
+.photo-categorie {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--dore);
+  flex-shrink: 0;
+}
+
+/* Liste des plats */
+.liste-plats {
+  list-style: none;
+  flex: 1;
+}
+
+/* Chaque plat */
+.plat {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(212, 168, 83, 0.2);
+  gap: var(--espacement-s);
+}
+
+.plat:last-child {
+  border-bottom: none;
+}
+
+.plat-info h3 {
+  font-family: var(--police-titre);
+  color: var(--blanc);
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+.plat-info p {
+  color: var(--texte-discret);
+  font-size: 0.85rem;
+  padding: 0;
+  margin: 0;
+}
+
+.prix {
+  color: var(--dore);
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: var(--police-titre);
+  white-space: nowrap;
+  padding: 0;
+}
+
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 768px) {
@@ -244,3 +331,11 @@ footer {
     font-size: 2rem;
   }
 }
+.categorie-contenu {
+    flex-direction: column;
+  }
+
+  .photo-categorie {
+    width: 100%;
+    height: 200px;
+  }
