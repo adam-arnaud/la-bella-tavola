@@ -2,9 +2,11 @@
 const burger = document.querySelector(".menu-burger");
 const menu = document.querySelector(".menu-liens");
 
-burger.addEventListener("click", function() {
-    menu.classList.toggle("actif");
-});
+if (burger && menu) {
+    burger.addEventListener("click", function() {
+        menu.classList.toggle("actif");
+    });
+}
 
 // Animation d'apparition au défilement
 const elements = document.querySelectorAll(".apparition");
