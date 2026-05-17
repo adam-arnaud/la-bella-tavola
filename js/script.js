@@ -8,6 +8,22 @@ if (burger && menu) {
     });
 }
 
+// Fermer le menu en cliquant sur un lien
+const liens = document.querySelectorAll(".menu-liens a");
+
+liens.forEach(function(lien) {
+    lien.addEventListener("click", function() {
+        menu.classList.remove("actif");
+    });
+});
+
+// Fermer le menu en cliquant en dehors
+document.addEventListener("click", function(event) {
+    if (!menu.contains(event.target) && !burger.contains(event.target)) {
+        menu.classList.remove("actif");
+    }
+});
+
 // Animation d'apparition au défilement
 const elements = document.querySelectorAll(".apparition");
 
