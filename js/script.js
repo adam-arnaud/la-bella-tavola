@@ -39,3 +39,21 @@ const observateur = new IntersectionObserver(function(entries) {
 elements.forEach(function(element) {
     observateur.observe(element);
 });
+
+// Bouton retour en haut
+const btnTop = document.getElementById("btnTop");
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 300) {
+        btnTop.classList.add("visible");
+    } else {
+        btnTop.classList.remove("visible");
+    }
+});
+
+btnTop.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
