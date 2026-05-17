@@ -448,25 +448,31 @@ footer {
 
 .infos-contenu {
   display: flex;
-  justify-content: center;
   gap: var(--espacement-m);
-  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.infos-texte {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacement-s);
+  flex: 1;
+  justify-content: space-between;
 }
 
 .info-bloc {
   background-color: var(--fond-moyen);
   border: 1px solid var(--dore);
   border-radius: 10px;
-  padding: var(--espacement-m);
+  padding: var(--espacement-s);
   text-align: center;
-  min-width: 180px;
 }
 
 .info-bloc h3 {
   color: var(--dore);
   font-family: var(--police-titre);
   font-weight: normal;
-  margin-bottom: var(--espacement-s);
+  margin-bottom: 8px;
   font-size: 1.1rem;
 }
 
@@ -474,4 +480,26 @@ footer {
   color: var(--texte-discret);
   font-size: 0.95rem;
   line-height: 1.8;
+}
+
+.carte {
+  flex: 2;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid var(--dore);
+}
+
+.carte iframe {
+  display: block;
+}
+
+/* Responsive carte */
+@media (max-width: 768px) {
+  .infos-contenu {
+    flex-direction: column;
+  }
+
+  .carte {
+    width: 100%;
+  }
 }
