@@ -14,9 +14,9 @@
 <body>
 
   <nav>
-   <a href="index.html">
-  <img src="images/logo.png" alt="Logo La Bella Tavola" class="logo-img">
-</a>
+    <a href="index.html">
+      <img src="images/logo.png" alt="Logo La Bella Tavola" class="logo-img">
+    </a>
     <button class="menu-burger" aria-label="Ouvrir le menu">☰</button>
     <div class="menu-liens">
       <a href="index.html" class="active">Accueil</a>
@@ -41,7 +41,10 @@
         </p>
         <p class="apparition">Chez nous, chaque assiette raconte l'Italie.</p>
 
-        <a href="menu.html" class="btn apparition">Voir notre menu</a>
+        <div class="hero-boutons apparition">
+          <a href="menu.html" class="btn">Voir notre menu</a>
+          <a href="contact.html" class="btn btn-secondaire">Réserver une table</a>
+        </div>
       </div>
 
       <img src="images/image-accueil.jpg" alt="Salle du restaurant La Bella Tavola à Liège"
@@ -49,6 +52,34 @@
 
     </section>
   </main>
+
+  <!-- Avis clients -->
+  <section class="avis">
+    <h2 class="apparition">Ce que disent nos clients</h2>
+
+    <div class="avis-contenu">
+      <div class="avis-carte apparition">
+        <p class="avis-texte">"Une cuisine italienne authentique comme en Italie. Les pâtes carbonara sont tout
+          simplement divines. On reviendra !"</p>
+        <p class="avis-auteur">— Sophie M., Liège</p>
+        <p class="avis-etoiles">★★★★★</p>
+      </div>
+
+      <div class="avis-carte apparition">
+        <p class="avis-texte">"Accueil chaleureux, cadre magnifique et plats généreux. Le tiramisu della casa est le
+          meilleur que j'ai mangé."</p>
+        <p class="avis-auteur">— Thomas B., Verviers</p>
+        <p class="avis-etoiles">★★★★★</p>
+      </div>
+
+      <div class="avis-carte apparition">
+        <p class="avis-texte">"Notre table préférée pour les grandes occasions. Le personnel est aux petits soins et la
+          carte des vins est excellente."</p>
+        <p class="avis-auteur">— Marie & Pierre D., Liège</p>
+        <p class="avis-etoiles">★★★★☆</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>📍 Rue Féronstrée 42, 4000 Liège</p>
