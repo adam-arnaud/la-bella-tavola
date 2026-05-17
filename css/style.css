@@ -330,8 +330,8 @@ footer {
   .hero-texte h1 {
     font-size: 2rem;
   }
-}
-.categorie-contenu {
+
+  .categorie-contenu {
     flex-direction: column;
   }
 
@@ -339,3 +339,139 @@ footer {
     width: 100%;
     height: 200px;
   }
+}
+/* ============================================
+   CONTACT & RÉSERVATIONS
+   ============================================ */
+
+.contact-hero {
+  text-align: center;
+  padding: var(--espacement-l) var(--espacement-m);
+  border-bottom: 1px solid var(--dore);
+}
+
+.contact-hero h1 {
+  font-family: var(--police-titre);
+  color: var(--dore);
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-bottom: var(--espacement-s);
+}
+
+.contact-hero p {
+  color: var(--texte-discret);
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   FORMULAIRES
+   ============================================ */
+
+.formulaire-section {
+  max-width: 700px;
+  margin: auto;
+  padding: var(--espacement-l) var(--espacement-m);
+  border-bottom: 1px solid var(--dore);
+}
+
+.formulaire-section h2 {
+  font-family: var(--police-titre);
+  color: var(--dore);
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-bottom: var(--espacement-m);
+  text-align: center;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacement-s);
+}
+
+.champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.champ label {
+  color: var(--texte-discret);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.champ input,
+.champ textarea {
+  background-color: var(--fond-moyen);
+  border: 1px solid var(--dore);
+  border-radius: 5px;
+  color: var(--blanc);
+  font-family: var(--police-texte);
+  font-size: 1rem;
+  padding: 10px 15px;
+  transition: border-color 0.3s ease;
+}
+
+.champ input:focus,
+.champ textarea:focus {
+  outline: none;
+  border-color: var(--rouge);
+}
+
+.champ textarea {
+  resize: vertical;
+}
+
+/* ============================================
+   INFOS PRATIQUES
+   ============================================ */
+
+.infos-pratiques {
+  max-width: 1200px;
+  margin: auto;
+  padding: var(--espacement-l) var(--espacement-m);
+}
+
+.infos-pratiques h2 {
+  font-family: var(--police-titre);
+  color: var(--dore);
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-bottom: var(--espacement-m);
+  text-align: center;
+}
+
+.infos-contenu {
+  display: flex;
+  justify-content: center;
+  gap: var(--espacement-m);
+  flex-wrap: wrap;
+}
+
+.info-bloc {
+  background-color: var(--fond-moyen);
+  border: 1px solid var(--dore);
+  border-radius: 10px;
+  padding: var(--espacement-m);
+  text-align: center;
+  min-width: 180px;
+}
+
+.info-bloc h3 {
+  color: var(--dore);
+  font-family: var(--police-titre);
+  font-weight: normal;
+  margin-bottom: var(--espacement-s);
+  font-size: 1.1rem;
+}
+
+.info-bloc p {
+  color: var(--texte-discret);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
