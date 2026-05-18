@@ -402,6 +402,61 @@ footer {
     visibility: visible;
 }
 
+/* ============================================
+   MENTIONS LÉGALES
+   ============================================ */
+
+.mentions {
+    max-width: 800px;
+    margin: auto;
+    padding: var(--espacement-l) var(--espacement-m);
+}
+
+.mentions h1 {
+    font-family: var(--police-titre);
+    color: var(--dore);
+    font-size: 2.5rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: var(--espacement-l);
+    text-align: center;
+}
+
+.mention-bloc {
+    margin-bottom: var(--espacement-m);
+    padding-bottom: var(--espacement-m);
+    border-bottom: 1px solid rgba(212, 168, 83, 0.3);
+}
+
+.mention-bloc:last-child {
+    border-bottom: none;
+}
+
+.mention-bloc h2 {
+    font-family: var(--police-titre);
+    color: var(--dore);
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-bottom: var(--espacement-s);
+}
+
+.mention-bloc p {
+    color: var(--texte-discret);
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
+
+.mention-bloc a {
+    color: var(--dore);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mention-bloc a:hover {
+    color: var(--blanc);
+    text-decoration: underline;
+}
+
 
 /* ============================================
    RESPONSIVE
