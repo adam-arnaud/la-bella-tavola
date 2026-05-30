@@ -457,6 +457,12 @@ footer {
     text-decoration: underline;
 }
 
+.sous-titre-menu {
+  font-size: 0.7em;
+  font-weight: normal;
+  opacity: 0.75;
+}
+
 
 /* ============================================
    RESPONSIVE
